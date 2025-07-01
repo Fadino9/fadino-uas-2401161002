@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontak Kami</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contact-section">
+      <a href="../index.html" class="back-button">← Kembali</a>
+      <h2>Hubungi Kami</h2>
+      <form>
+        <div>
+          <label for="name">Nama Lengkap</label>
+          <input
+            type="text"
+            id="name"
+            x`
+            name="name"
+            placeholder="Masukkan nama lengkap..."
+            required
+          />
+        </div>
+
+        <div>
+          <label for="phone">No. HP</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Contoh: 0812xxxxxxx"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="country">Negara</label>
+          <select id="country" name="country" required>
+            <option value="">-- Pilih Negara --</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Singapura">Singapura</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="email">Alamat Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Contoh: email@contoh.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="message">Pesan / Pertanyaan</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tulis pesanmu di sini..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+  </body>
+</html>

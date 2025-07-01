@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #141414;
+  color: #fff;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  height: 60px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Menu */
+.menu-horizontal {
+  background-color: #1f1f1f;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.menu-toggle {
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+.menu-items {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-items a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu-items a:hover {
+  color: #e50914;
+}
+
+/* Main Content */
+.content-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  flex: 1;
+  padding: 16px;
+}
+
+.carousel {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.carousel-row {
+  margin-bottom: 20px;
+}
+
+.row-title {
+  margin: 10px;
+  font-size: 1.2em;
+  color: #e50914;
+}
+
+.carousel-track {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 16px;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+.movie-info {
+  padding: 10px;
+  background-color: #1c1c1c;
+}
+
+.movie-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 1em;
+}
+
+.movie-info span {
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+/* Chat Widget */
+.widget-right {
+  flex: 1;
+  background-color: #222;
+  padding: 20px;
+  border-left: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #111;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #1c1c1c;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px 14px;
+  border-radius: 16px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 0.95em;
+  color: #fff;
+}
+
+.message.me {
+  background-color: #e50914;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message.public {
+  background-color: #444;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+}
+
+.chat-form button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #e50914;
+  transition: transform 0.2s;
+}
+
+.chat-form button:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+.content2-area {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #0d0d0d;
+  border-top: 1px solid #333;
+}
+
+.bottom-box {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: background 0.3s ease;
+  padding: 10px;
+  border-top: 1px solid #222;
+}
+
+.bottom-box:hover {
+  background-color: #2a2a2a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .menu-items.active {
+    display: flex;
+  }
+
+  .content-area {
+    flex-direction: column;
+  }
+
+  .widget-right {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .carousel-item {
+    width: 90vw;
+  }
+  .carousel-track {
+    flex-direction: column;
+  }
+
+  .carousel-item iframe {
+    height: 180px;
+  }
+}

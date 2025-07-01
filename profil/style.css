@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #141414;
+  color: #fff;
+}
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  background-color: #1f1f1f;
+  color: #e50914;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.profil-section {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  padding: 40px;
+  gap: 40px;
+  background: linear-gradient(to bottom, #141414, #000000);
+}
+
+.left-profile {
+  flex: 1;
+  background-color: #1f1f1f;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.left-profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #e50914;
+}
+
+.left-profile .info {
+  text-align: center;
+}
+
+.left-profile .info h3 {
+  margin: 10px 0;
+  font-size: 1.4em;
+  color: #e50914;
+}
+
+.left-profile .info p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.right-profile {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  padding: 80px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.right-profile h2 {
+  color: #e50914;
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.right-profile .img {
+  display: flex;
+  justify-content: center;
+}
+
+.right-profile img {
+  width: 500px;
+  aspect-ratio: 4 / 5;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.right-profile p {
+  font-size: 1em;
+  line-height: 1.7;
+  color: #ddd;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .profil-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .right-profile img {
+    max-height: 200px;
+  }
+  .right-profile h2 {
+    font-size: 16px;
+  }
+}
