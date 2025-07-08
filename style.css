@@ -220,7 +220,7 @@ body {
 /* Footer */
 .content2-area {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 30px;
   background-color: #0d0d0d;
   border-top: 1px solid #333;
