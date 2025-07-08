@@ -220,12 +220,13 @@ body {
 /* Footer */
 .content2-area {
   display: flex;
-  justify-content: center; /* Posisikan di tengah secara horizontal */
-  gap: 30px; /* Jarak antar menu */
+  justify-content: center;
+  gap: 30px;
   background-color: #0d0d0d;
   border-top: 1px solid #333;
   padding: 15px 0;
-  flex-wrap: wrap; /* Agar responsif di layar kecil */
+  flex-wrap: wrap;
+  margin-top: 50px; /* Jarak dari konten sebelumnya */
 }
 
 .bottom-box {
@@ -239,8 +240,6 @@ body {
 .bottom-box:hover {
   color: #00ccff;
 }
-
-
 
 /* Responsive */
 @media (max-width: 768px) {
